@@ -9,7 +9,7 @@
 # NOTES:
 # to delete a cask:
 # sudo brew cask zap <cask>
-
+# casks located in /opt
 
 # the host in which the playbook will be run
 - hosts: localhost
@@ -30,6 +30,16 @@
   
   tasks:  
   - include_vars: vars/homebrew.yml
+#  - include_vars: vars/osx_defaults.yml
+
+#  - name: Install OSX Defaults
+#    osx_defaults: domain={{ item.domain }} key={{ item.key }} type={{ item.type }} value={{ item.value }} state={{ item.state }}
+#   notify: killall Finder
+#    with_items: '{{ osx_defaults }}'
+
+#    notify: killall SystemUIServer
+
+
 
   - name: Install homebrew taps
     homebrew_tap: tap={{ item }}
@@ -43,7 +53,7 @@
     homebrew_cask: name={{ item }}
     with_items: '{{ brew_casks }}'
     environment:
-        HOMEBREW_CASK_OPTS: "--appdir=/Applications"
+      HOMEBREW_CASK_OPTS: "--appdir=/Applications"
 
     #- name: Start services at login
     #  file: src=/usr/local/opt/{{ item }}/homebrew.mxcl.{{ item }}.plist path=~/Library/LaunchAgents/homebrew.mxcl.{{ item }}.plist state=link force=yes
