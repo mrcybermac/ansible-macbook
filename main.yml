@@ -1,0 +1,60 @@
+---
+# Initial Manual Steps:
+#  Install Homebrew
+#  sudo chown root /usr/local/bin/brew
+#  sudo brew install ansible
+#  export HOMEBREW_CASK_OPTS="--appdir=/Applications"  <---- add to .zshrc
+#  sudo ansible-playbook -i "localhost" -c local main.yml
+
+# NOTES:
+# to delete a cask:
+# sudo brew cask zap <cask>
+
+
+# the host in which the playbook will be run
+- hosts: localhost
+  
+  # the target user Ansible will impersonate when provisioning
+  user: macg
+
+  # this makes all tasks run with sudo by default
+  sudo: true
+
+  # additional variables
+  vars:
+    user: macg
+
+  # roles are a way to group tasks; they will run in the sequence determined here
+  #roles:
+    #- system
+  
+  tasks:  
+  - include_vars: vars/homebrew.yml
+
+  - name: Install homebrew taps
+    homebrew_tap: tap={{ item }}
+    with_items: '{{ brew_taps }}'
+
+  - name: Install homebrew apps
+    homebrew: name={{ item }}
+    with_items: '{{ brew_apps }}'
+
+  - name: Install homebrew casks
+    homebrew_cask: name={{ item }}
+    with_items: '{{ brew_casks }}'
+    environment:
+        HOMEBREW_CASK_OPTS: "--appdir=/Applications"
+
+    #- name: Start services at login
+    #  file: src=/usr/local/opt/{{ item }}/homebrew.mxcl.{{ item }}.plist path=~/Library/LaunchAgents/homebrew.mxcl.{{ item }}.plist state=link force=yes
+    #  with_items: 
+    #    - mysql
+    #    - elasticsearch
+
+    #- name: Setup launch agents for services
+    #  command: launchctl load {{ home }}/Library/LaunchAgents/homebrew.mxcl.{{ item }}.plist
+    #  with_items:
+    #    - mysql
+    #    - elasticsearch
+
+...

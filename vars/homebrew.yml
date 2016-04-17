@@ -1,0 +1,28 @@
+---
+brew_install_path: /usr/local
+brew_bin_path: /usr/local/bin
+brew_cask_appdir: /Applications
+brew_taps:
+  - caskroom/cask
+  - ethereum/ethereum
+brew_apps:
+  - wget
+  #- apple-gcc42
+  - vim
+  - ack
+  - git
+  #- elasticsearch
+  - tmux
+  - libyaml
+  - mongodb
+  - redis
+  - ethereum
+  - the_silver_searcher
+brew_casks:
+  - firefox
+  - atom
+
+
+
+
+
