@@ -2,10 +2,34 @@
 # http://docs.ansible.com/ansible/osx_defaults_module.html
 
 osx_defaults:
-  - { domain: com.apple.finder, key: AppleShowAllFiles, type: boolean, value: true, state: present, notify: 'killall Finder' }
-#  - { domain: com.apple.desktopservices, key: DSDontWriteNetworkStores, type: string, value: true, state: present }
-  - { domain: com.apple.screencapture, key: disable-shadow, type: boolean, value: true, state: present, notify: 'killall SystemUIServer' }
-  - { domain: NSGlobalDomain, key: KeyRepeat, type: int, value: 1, state: present, notify: '' }   # 2 is fastest value from UI.  1 and 0 are even faster.
-  - { domain: NSGlobalDomain, key: AppleShowAllFiles, type: boolean, value: true, state: present, notify: 'killall Finder' }
-  - { domain: com.apple.screencapture, key: location, type: string, value: '~/Pictures/Screenshots/', state: present, notify: killall SystemUIServer }
+  - domain: com.apple.finder
+    key: AppleShowAllFiles
+    type: boolean
+    value: true
+    state: present
+#  - domain: com.apple.desktopservices
+#    key: DSDontWriteNetworkStores
+#    type: string
+#    value: true
+#    state: present
+  - domain: com.apple.screencapture
+    key: disable-shadow
+    type: boolean
+    value: true
+    state: present
+  - domain: NSGlobalDomain
+    key: KeyRepeat
+    type: int
+    value: 1
+    state: present
+  - domain: NSGlobalDomain
+    key: AppleShowAllFiles
+    type: boolean
+    value: true
+    state: present
+  - domain: com.apple.screencapture
+    key: location
+    type: string
+    value: '~/Pictures/Screenshots/'
+    state: present
 ...

@@ -45,12 +45,10 @@
                     type={{ item.type }}
                     value={{ item.value }}
                     state={{ item.state }}
-    notify: '{{ item.notify }}' #killall Finder
     with_items: '{{ osx_defaults }}'
-
-#    notify: killall SystemUIServer
-
-
+    notify:
+      - restart Finder
+      - restart UI
 
   - name: Install homebrew taps
     homebrew_tap: tap={{ item }}
@@ -77,5 +75,10 @@
     #  with_items:
     #    - mysql
     #    - elasticsearch
-
+  
+  handlers:
+    - name: restart Finder
+      command: killall Finder
+    - name: restart UI 
+      command: killall SystemUIServer
 ...
