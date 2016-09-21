@@ -1,0 +1,4 @@
+git config stuff
+install oh my zsh
+http://sourabhbajaj.com/mac-setup/iTerm/zsh.html
+see this:  https://github.com/ideasonpurpose/ansible-playbooks/blob/master/admin.yml

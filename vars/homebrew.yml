@@ -1,4 +1,5 @@
 ---
+# SEE:  http://sourabhbajaj.com/mac-setup/Homebrew/Cask.html
 
 brew_install_path: /usr/local
 
@@ -9,25 +10,63 @@ brew_cask_appdir: /Applications
 brew_taps:
   - caskroom/cask
   - ethereum/ethereum
+  - ethcore/ethcore
 
 brew_apps:
+  ### utilities
+  - the_silver_searcher
   - wget
-  #- apple-gcc42
-  - vim
   - ack
-  - git
-  #- elasticsearch
-  - tmux
   - libyaml
+  #- apple-gcc42
+  ### tools
+  - vim
+  - git
+  - task
+  - pass
+  #- elasticsearch
+  ### database
   - mongodb
   - redis
+  ### blockchains
   - ethereum
-  - the_silver_searcher
+  - parity
+  ### devops
+  - boot2docker
+  - gpg-agent
+  - zsh
+  - zsh-completions
 
 brew_casks:
   - firefox
   - atom
-
+  - iterm2
+  - slack
+  #- airmail
+  - android-file-transfer
+  #- asepsis
+  - caffeine
+  - cheatsheet
+  - doubletwist
+  - dropbox
+  - google-chrome
+  - google-drive
+  - google-hangouts
+  - flux
+  - 1password
+  - pdftk
+  - spectacle
+  - superduper
+  - vlc
+  - transmission
+  - diffmerge
+  - boom
+  - virtualbox
+  - vagrant
+  - vagrant-manager
+  - time-out
+  - avira-antivirus
+  - ipvanish-vpn
 
 
 
