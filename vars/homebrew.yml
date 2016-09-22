@@ -67,7 +67,17 @@ brew_casks:
   - time-out
   - avira-antivirus
   - ipvanish-vpn
-
-
-
-
+  - gpgtools
+  - sourcetree
+  - webstorm
+  - tunnelblick
+  - thunderbird
+  - skype
+  - seafile-client
+  - robomongo
+  - rdm
+  - flycut
+  - firefox
+  - evernote
+  - clarify
+  - little-snitch
