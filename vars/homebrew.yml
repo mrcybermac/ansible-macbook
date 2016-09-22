@@ -40,6 +40,8 @@ brew_apps:
 brew_casks:
   - firefox
   - atom
+  - openoffice
+  - apptrap
   - iterm2
   - slack
   #- airmail
@@ -54,7 +56,6 @@ brew_casks:
   - google-hangouts
   - flux
   - 1password
-  - pdftk
   - spectacle
   - superduper
   - vlc
