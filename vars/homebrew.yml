@@ -67,7 +67,6 @@ brew_casks:
   - vagrant
   - vagrant-manager
   - time-out
-  - avira-antivirus
   - ipvanish-vpn
   - gpgtools
   - sourcetree
