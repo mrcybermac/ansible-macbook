@@ -10,7 +10,7 @@ brew_cask_appdir: /Applications
 brew_taps:
   - caskroom/cask
   - ethereum/ethereum
-  - ethcore/ethcore
+  - paritytech/paritytech
 
 brew_apps:
   ### utilities
@@ -19,66 +19,76 @@ brew_apps:
   - ack
   - libyaml
   #- apple-gcc42
+
   ### tools
   - vim
   - git
   - task
-  - pass
+  #- pass
   #- elasticsearch
+
   ### database
-  - mongodb
-  - redis
+  #- mongodb
+  #- redis
+
   ### blockchains
-  - ethereum
-  - parity
+  #- ethereum
+  #- parity
+
   ### devops
-  - boot2docker
+  #- boot2docker
   - gpg-agent
   - zsh
   - zsh-completions
 
 brew_casks:
-  - firefox
-  - spotify
-  - atom
-  - openoffice
-  - apptrap
-  - iterm2
-  - slack
   #- airmail
-  - android-file-transfer
   #- asepsis
-  - caffeine
+  #- caffeine
+  #- clarify
+  #- doubletwist
+  #- ipvanish-vpn
+  #- rdm
+  #- robomongo
+  #- seafile-client
+  #- slack
+  #- thunderbird
+  #- tunnelblick
+  #- vagrant
+  #- vagrant-manager
+  #- virtualbox
+  - 1password
+  - android-file-transfer
+  - apptrap
+  - atom
+  - boom
   - cheatsheet
-  - doubletwist
+  - diffmerge
   - dropbox
+  - discord
+  - evernote
+  - firefox
+  - firefox
+  - flux
+  - flycut
   - google-chrome
   - google-drive
   - google-hangouts
-  - flux
-  - 1password
-  - spectacle
-  - superduper
-  - vlc
-  - transmission
-  - diffmerge
-  - boom
-  - virtualbox
-  - vagrant
-  - vagrant-manager
-  - time-out
-  - ipvanish-vpn
   - gpgtools
-  - sourcetree
-  - webstorm
-  - tunnelblick
-  - thunderbird
-  - skype
-  - seafile-client
-  - robomongo
-  - rdm
-  - flycut
-  - firefox
-  - evernote
-  - clarify
+  - iterm2
+  - kindle
+  - kindle-comic-converter
   - little-snitch
+  - omnifocus
+  - openoffice
+  - private-internet-access
+  - skype
+  - sourcetree
+  - spectacle
+  - spotify
+  - superduper
+  - time-out
+  - transmission
+  - vlc
+  - webstorm
+  - whatsapp

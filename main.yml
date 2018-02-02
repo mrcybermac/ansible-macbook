@@ -41,14 +41,11 @@
 
   - name: Install OSX Defaults
     osx_defaults: domain={{ item.domain }}
-                    key={{ item.key }}
-                    type={{ item.type }}
-                    value={{ item.value }}
-                    state={{ item.state }}
+                  key={{ item.key }}
+                  type={{ item.type }}
+                  value={{ item.value }}
+                  state={{ item.state }}
     with_items: '{{ osx_defaults }}'
-    notify:
-      - restart Finder
-      - restart UI
     ignore_errors: true
 
   - name: Install homebrew taps
@@ -60,12 +57,19 @@
     homebrew: name={{ item }}
     with_items: '{{ brew_apps }}'
     sudo: false
+    ignore_errors: true
 
   - name: Install homebrew casks
     homebrew_cask: name={{ item }}
     with_items: '{{ brew_casks }}'
+    sudo: false
     environment:
       HOMEBREW_CASK_OPTS: "--appdir=/Applications"
+    tags:
+      - casks
+    notify:
+      - restart Finder
+      - restart UI
 
     #- name: Start services at login
     #  file: src=/usr/local/opt/{{ item }}/homebrew.mxcl.{{ item }}.plist path=~/Library/LaunchAgents/homebrew.mxcl.{{ item }}.plist state=link force=yes
@@ -78,10 +82,10 @@
     #  with_items:
     #    - mysql
     #    - elasticsearch
-  
+
   handlers:
     - name: restart Finder
       command: killall Finder
-    - name: restart UI 
+    - name: restart UI
       command: killall SystemUIServer
 ...
