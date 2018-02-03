@@ -22,9 +22,6 @@
   # the target user Ansible will impersonate when provisioning
   user: macg
 
-  # this makes all tasks run with sudo by default
-  sudo: true
-
   # additional variables
   vars:
     user: macg
@@ -57,7 +54,6 @@
     homebrew:
       name: "{{ item }}"
     with_items: '{{ brew_apps }}'
-    sudo: false
     ignore_errors: true
 
   - name: Install homebrew casks
@@ -66,9 +62,6 @@
       state: present
       install_options: "appdir={{ brew_cask_appdir }}"
     with_items: "{{ brew_casks }}"
-    sudo: false
-    # environment:
-    #   HOMEBREW_CASK_OPTS: "--appdir=/Applications"
     tags:
       - casks
     # notify:

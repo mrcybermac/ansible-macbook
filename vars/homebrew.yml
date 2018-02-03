@@ -73,9 +73,9 @@ brew_casks:
   - flux
   - flycut
   - google-chrome
-  - google-drive
+  - google-drive-file-stream
   - google-hangouts
-  - gpgtools
+  - gpgsuite
   - iterm2
   - kindle
   - kindle-comic-converter
