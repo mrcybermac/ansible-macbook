@@ -65,6 +65,7 @@ brew_casks:
   - brave
   - cheatsheet
   - diffmerge
+  - dockutil
   - dropbox
   - discord
   - evernote
