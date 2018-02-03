@@ -40,7 +40,7 @@ brew_apps:
   - gpg-agent
   - zsh
   - zsh-completions
-
+brew_cask_appdir: /Applications
 brew_casks:
   #- airmail
   #- asepsis
@@ -62,6 +62,7 @@ brew_casks:
   - apptrap
   - atom
   - boom
+  - brave
   - cheatsheet
   - diffmerge
   - dropbox

@@ -1,0 +1,52 @@
+dockitems_to_remove:
+  - Launchpad
+  - Siri
+  - Mail
+  - Safari
+  - Contacts
+  - Notes
+  - Reminders
+  - Maps
+  - Photos
+  - Messages
+  - FaceTime
+  #- iTunes
+  - iBooks
+  #- App Store
+  - System Preferences
+  - Calendar
+
+dockitems_to_persist:
+  - name: App Store
+    path: "/Applications/App Store.app"
+    pos: 1
+  - name: Google Chrome
+    path: "/Applications/Google Chrome.app"
+    pos: 2
+  - name: Firefox
+    path: "/Applications/Firefox.app"
+    pos: 3
+  - name: Brave
+    path: /Applications/Brave.app
+    pos: 4
+  - name: Spotify
+    path: /Applications/Spotify.app
+    pos: 5
+  - name: iTunes
+    path: /Applications/iTunes.app
+    pos: 6
+  - name: iTerm
+    path: /Applications/iTerm.app
+    pos: 7
+  - name: VLC
+    path: /Applications/VLC.app
+    pos: 8
+  - name: SourceTree
+    path: "/Applications/SourceTree.app"
+    pos: 9
+  - name: WebStorm
+    path: "/Applications/WebStorm.app"
+    pos: 10
+  - name: Atom
+    path: "/Applications/Atom.app"
+    pos: 11
