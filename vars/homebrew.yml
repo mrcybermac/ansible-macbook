@@ -75,7 +75,7 @@ brew_casks:
   - google-chrome
   - google-drive-file-stream
   - google-hangouts
-  - gpgsuite
+  - gpg-suite
   - iterm2
   - kindle
   - kindle-comic-converter
