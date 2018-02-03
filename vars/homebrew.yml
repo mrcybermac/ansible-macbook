@@ -17,6 +17,7 @@ brew_apps:
   - the_silver_searcher
   - wget
   - ack
+  - dockutil
   - libyaml
   #- apple-gcc42
 
@@ -65,7 +66,6 @@ brew_casks:
   - brave
   - cheatsheet
   - diffmerge
-  - dockutil
   - dropbox
   - discord
   - evernote
