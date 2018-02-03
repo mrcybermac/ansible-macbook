@@ -81,7 +81,7 @@
     #    - elasticsearch
   - name: Remove all crap from Dock
     shell: dockutil --remove '{{ item }}'
-    ignore_errors: true
+    #ignore_errors: true
     with_items: dockitems_to_remove
 
   - name: Check if items in dock exist
